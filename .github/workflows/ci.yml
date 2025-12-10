@@ -1,0 +1,13 @@
+name: App CI (Enterprise Template)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  use-enterprise-template:
+    uses: acme-enterprise/.github/.github/workflows/reusable-ci.yml@v1
+    with:
+      node-version: "20"
+      run-tests: "true"
